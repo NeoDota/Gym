@@ -7,7 +7,10 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <div class="bg-white p-3 m-3 rounded-2xl shadow-2xl">
+        @livewire('equipo.equipo-create')
+        @livewire('equipo.equipo-list')
+    </div>
 @stop
 
 @section('css')

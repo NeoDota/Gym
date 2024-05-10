@@ -329,7 +329,7 @@ return [
             ],  /* nose sabe revisar doc desp */
         ],
         /* End Example */
-        [
+        /* [
             'text' => 'menu',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
@@ -342,12 +342,30 @@ return [
                     'url' => 'menu/child2',
                 ],
             ],
+        ], */
+        [
+            'text' => 'Home',
+            'url' => 'home',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-home',
+        ],
+        [
+            'text' => 'Blog',
+            'url' => 'blog',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-blog',
+        ],
+        [
+            'text' => 'Equipos',
+            'url' => 'equipo',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-share',
         ],
         [
             'text' => 'Dashboard',
             'url' => 'dashboard',
             'classes' => 'text-bold',
-            'icon' => 'fas fa-fw fa-home',
+            'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'pages',
