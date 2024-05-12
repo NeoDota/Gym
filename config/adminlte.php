@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<h4><b>VIP</b>GYM</h4>',
+    'logo' => '<div class="font-bold text-2xl"><b class="text-white" >VIP</b>GYM</div>',
     'logo_img' => 'image/icono.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -194,7 +194,7 @@ return [
     'classes_brand' => 'bg-black',
     'classes_brand_text' => 'text-green',
     'classes_content_wrapper' => 'bg-slate-400',/* bg de cont de plantilla AdmLTE */
-    'classes_content_header' => '',/* Estilos al Header */
+    'classes_content_header' => 'font-bold mx-8',/* Estilos al Header */
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-green elevation-4 bg-black',
     'classes_sidebar_nav' => '',
@@ -354,6 +354,24 @@ return [
             'url' => 'pay',
             'classes' => 'text-bold',
             'icon' => 'fas fa-fw fa-pay',
+        ],
+        [
+            'text' => 'Asignar Curso',
+            'url' => 'course',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-comunity',
+        ],
+        [
+            'text' => 'Categoria',
+            'url' => 'category',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-share',
+        ],
+        [
+            'text' => 'Asistencia',
+            'url' => 'assist',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-list',
         ],
         [
             'text' => 'Member',
@@ -655,11 +673,11 @@ return [
                     'asset' => false,
                     'location' => '//cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet',
                 ],
-                /* [
-                    'type' => 'css',
+                [
+                    'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries',
-                ], */
+                    'location' => '//cdn.tailwindcss.com',
+                ],
             ],
         ],
 

@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AssistController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
@@ -28,3 +31,6 @@ Route::resource('equipo', EquipoController::class);
 Route::resource('producto', ProductoController::class);
 Route::resource('member', MemberController::class);
 Route::resource('pay', PayController::class);
+Route::resource('category', CategoryController::class);
+Route::resource('assist', AssistController::class);
+Route::resource('course', CourseController::class);

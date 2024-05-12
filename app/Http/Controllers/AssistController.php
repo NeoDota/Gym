@@ -13,7 +13,7 @@ class AssistController extends Controller
      */
     public function index()
     {
-        //
+        return view('global.vassist');
     }
 
     /**

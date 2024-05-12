@@ -13,6 +13,24 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
+            $table->time('hora');
+            $table->date('fecha');
+
+            $table->unsignedBigInteger('users_id')->nullable();/* unique hace que se ligue 1 a 1.no 2 a 1, ni 1 a 2 | ->nullable() si necesitas consevar el post[->set null] */
+            $table->foreign('users_id')
+                ->references('id')
+                ->on('users')/* para que actualice el id */
+                ->onUpdate('cascade')
+                ->onDelete('set null');/* 'set null' |^ ->nullable() */
+
+            
+            $table->unsignedBigInteger('categories_id')->nullable();/* unique hace que se ligue 1 a 1.no 2 a 1, ni 1 a 2 | ->nullable() si necesitas consevar el post[->set null] */
+            $table->foreign('categories_id')
+                ->references('id')
+                ->on('categories')/* para que actualice el id */
+                ->onUpdate('cascade')
+                ->onDelete('set null');/* 'set null' |^ ->nullable() */
+
             $table->timestamps();
         });
     }
