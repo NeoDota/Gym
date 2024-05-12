@@ -3,23 +3,34 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+<h1>Dashboard</h1>
 @stop
 
 @section('content')
-    <div class="bg-white p-3 m-3 rounded-2xl shadow-2xl">
-        @livewire('user.user-create')
-        @livewire('user.user-list')
-    </div>
+<div class="bg-white p-3 m-3 rounded-2xl shadow-2xl">
+    @livewire('pay.pay-create')
+</div>
+<div class="bg-white p-3 m-3 rounded-2xl shadow-2xl">
+    @livewire('pay.pay-list')
+</div>
 @stop
 
 @section('css')
-    {{-- Add here extra stylesheets --}}
-    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+{{-- Add here extra stylesheets --}}
+{{--
+<link rel="stylesheet" href="/css/admin_custom.css"> --}}
 @stop
 
 @section('js')
+
 <script>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+</script>
+
+<script>
+    
     new DataTable('#example', {
         layout: {
             topStart: {

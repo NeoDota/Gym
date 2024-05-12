@@ -79,4 +79,8 @@ class User extends Authenticatable
         return 'profile/username';
     }
 
+    public function pays()
+    {
+        return $this->hasMany('App\Models\Pay', 'users_id', 'id');
+    }
 }

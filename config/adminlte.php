@@ -350,6 +350,18 @@ return [
             'icon' => 'fas fa-fw fa-home',
         ],
         [
+            'text' => 'Pagos',
+            'url' => 'pay',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-pay',
+        ],
+        [
+            'text' => 'Member',
+            'url' => 'member',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-admin',
+        ],
+        [
             'text' => 'Blog',
             'url' => 'blog',
             'classes' => 'text-bold',
@@ -360,6 +372,12 @@ return [
             'url' => 'equipo',
             'classes' => 'text-bold',
             'icon' => 'fas fa-fw fa-share',
+        ],
+        [
+            'text' => 'Productos',
+            'url' => 'producto',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-file',
         ],
         [
             'text' => 'Dashboard',
@@ -597,6 +615,22 @@ return [
             ],
         ],
 
+        'AlpineJS' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//unpkg.com/alpinejs@3.x.x/dist/alpine.min.js',
+                ],
+            ],
+        ],
+
         'Boostrap 5' => [
             'active' => true,
             'files' => [
@@ -629,29 +663,18 @@ return [
             ],
         ],
 
-        'Alpinejs' => [
+        'Select2' => [
             'active' => true,
             'files' => [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js',
-                ],
-            ],
-        ],
-
-        'Select2' => [
-            'active' => false,
-            'files' => [
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js',
                 ],
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.css',
                 ],
             ],
         ],

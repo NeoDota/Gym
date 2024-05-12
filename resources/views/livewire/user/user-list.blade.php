@@ -1,5 +1,5 @@
 <div>
-    <table class="table">
+    <table id="example" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -16,9 +16,7 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->password }}</td>
-                <td>
-                    <img src="{{ Storage::url($user->image) }}" width="50px" height="40px">
-                </td>
+                <td><img src="{{ Storage::url($user->image) }}" width="50px" height="40px"></td>
             </tr>
             @endforeach
         </tbody>
