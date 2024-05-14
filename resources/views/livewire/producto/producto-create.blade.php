@@ -1,4 +1,13 @@
 <div>
+    <div class="text-center py-2 font-mono text-lg"><b>Registrar Producto</b></div>
+
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
+
+    
     <form wire:submit='createProducto'>
         <input type="text" wire:model='title' placeholder="producto">
         <input type="number" wire:model='precio' placeholder="precio">

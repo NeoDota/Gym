@@ -1,5 +1,5 @@
 <div>
-    <table class="table">
+    <table id="example" class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>

@@ -1,22 +1,29 @@
 <div>
-    <table class="table">
+    <div class="text-center py-2 font-mono text-lg"><b>Lista de Cursos Programados</b></div>
+    <table id="example" class="table">
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">hora</th>
-                <th scope="col">fecha</th>
-                <th scope="col">user</th>
-                <th scope="col">categorya</th>
+                <th class="text-center" scope="col">Perfil</th>
+                <th class="text-center" scope="col">user</th>
+                <th class="text-center" scope="col">hora</th>
+                <th class="text-center" scope="col">fecha</th>
+                <th class="text-center" scope="col">categorya</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($courses as $course)
             <tr>
-                <th scope="row">{{ $course->id }}</th>
-                <td>{{ $course->hora }}</td>
-                <td>{{ $course->fecha }}</td>
-                <td>{{ $course->users_id }}</td>
-                <td>{{ $course->categories_id }}</td>
+                <td class="text-center">
+                    @if ($course->user)
+                        <img src="{{ Storage::url($course->user->image) }}" width="50px" height="40px"class="rounded-full">
+                    @else
+                        <img src="{{ asset('image/logoM.png') }}" width="50px" height="40px"class="rounded-full bg-black">
+                    @endif
+                </td>
+                <td class="text-center">{{ $course->users_id }}</td>
+                <td class="text-center">{{ $course->hora }}</td>
+                <td class="text-center">{{ $course->fecha }}</td>
+                <td class="text-center">{{ $course->category->tipo }}</td>
             </tr>
             @endforeach
         </tbody>

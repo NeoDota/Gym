@@ -343,42 +343,69 @@ return [
                 ],
             ],
         ], */
+        
+        /* Home */
+
+        ['header' => 'HOME'],
         [
             'text' => 'Home',
             'url' => 'home',
             'classes' => 'text-bold',
             'icon' => 'fas fa-fw fa-home',
         ],
+
+        /* Ventas */
+
+        ['header' => 'VENTAS'],
+        [
+            'text' => 'Asistencia',
+            'url' => 'assist',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-list-check',
+        ],
         [
             'text' => 'Pagos',
             'url' => 'pay',
             'classes' => 'text-bold',
-            'icon' => 'fas fa-fw fa-pay',
+            'icon' => 'fas fa-fw fa-hand-holding-dollar',
         ],
         [
             'text' => 'Asignar Curso',
             'url' => 'course',
             'classes' => 'text-bold',
-            'icon' => 'fas fa-fw fa-comunity',
+            'icon' => 'fas fa-fw fa-person-chalkboard',
         ],
+        /* Admin */
+
+        ['header' => 'ADMIN'],
         [
-            'text' => 'Categoria',
-            'url' => 'category',
+            'text' => 'Usuarios',
+            'url' => 'user',
             'classes' => 'text-bold',
-            'icon' => 'fas fa-fw fa-share',
-        ],
-        [
-            'text' => 'Asistencia',
-            'url' => 'assist',
-            'classes' => 'text-bold',
-            'icon' => 'fas fa-fw fa-list',
+            'icon' => 'fas fa-fw fa-users',
+            'label' => 'falta',
         ],
         [
             'text' => 'Member',
             'url' => 'member',
             'classes' => 'text-bold',
-            'icon' => 'fas fa-fw fa-admin',
+            'icon' => 'fas fa-fw fa-user-check',
         ],
+        [
+            'text' => 'Categorias',
+            'url' => 'category',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-layer-group',
+        ],
+        [
+            'text' => 'Productos',
+            'url' => 'producto',
+            'classes' => 'text-bold',
+            'icon' => 'fas fa-fw fa-cart-shopping',
+        ],
+        /* Admin */
+
+        ['header' => 'EXTRAS'],
         [
             'text' => 'Blog',
             'url' => 'blog',
@@ -389,26 +416,7 @@ return [
             'text' => 'Equipos',
             'url' => 'equipo',
             'classes' => 'text-bold',
-            'icon' => 'fas fa-fw fa-share',
-        ],
-        [
-            'text' => 'Productos',
-            'url' => 'producto',
-            'classes' => 'text-bold',
-            'icon' => 'fas fa-fw fa-file',
-        ],
-        [
-            'text' => 'Dashboard',
-            'url' => 'dashboard',
-            'classes' => 'text-bold',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
+            'icon' => 'fas fa-fw fa-wrench',
         ],
         ['header' => 'account_settings'],
         [

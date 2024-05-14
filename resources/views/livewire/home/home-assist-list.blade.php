@@ -1,19 +1,12 @@
-<div>
-    <div class="text-center py-2 font-mono text-lg"><b>Lista de Asistencia</b></div>
-
-    @if(session()->has('message'))
-        <div class="alert alert-success">
-            {{ session('message') }}
-        </div>
-    @endif
-
-    <table id="example" class="table">
-        <thead>
+<div class="table-responsive">
+    <div class="text-center py-2 font-mono text-lg"><b>Registro de Asistencias</b></div>
+    <table class="table table-hover">
+        <thead class="table-dark">
             <tr>
                 <th class="text-center" scope="col">Perfil</th>
                 <th class="text-center" scope="col">Usuario</th>
-                <th class="text-center" scope="col">Hora de Ingreso</th>
-                <th class="text-center" scope="col">Fecha de Ingreso</th>
+                <th class="text-center" scope="col">Hora</th>
+                <th class="text-center" scope="col">Fecha</th>
                 <th class="text-center" scope="col">Categoria</th>
                 <th class="text-center" scope="col">Estado</th>
             </tr>
@@ -21,14 +14,15 @@
         <tbody>
             @foreach ($assists as $assist)
             <tr>
+
                 <td class="text-center">
                     @if ($assist->pay->user->image)
                         <td class="text-center"><img src="{{ Storage::url($assist->pay->user->image) }}" width="50px" height="40px"class="rounded-full"></td>
                     @else
-                        <img src="{{ asset('image/logoM.png') }}" width="50px" height="40px"class="rounded-full bg-black">
+                    <img src="{{ asset('image/logoM.png') }}" width="50px" height="40px"class="rounded-full bg-black">
                     @endif
                 </td>
-                <td class="text-center">{{ $assist->pay->user->name }} {{ $assist->pay->user->last }}</td>
+                <td class="text-center">{{ $assist->pay->user->name }} {{ $assist->pay->user->lastname }}</td>
                 <td class="text-center">{{ \Carbon\Carbon::parse($assist->created_at)->format('H:i') }}</td>
                 <td class="text-center">{{ \Carbon\Carbon::parse($assist->created_at)->locale('es')->isoFormat('DD [de] MMMM') }}</td>
                 <td class="text-center">{{ $assist->category->tipo }}</td>

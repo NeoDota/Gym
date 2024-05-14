@@ -1,5 +1,5 @@
 <div>
-    <div class="text-center py-2 font-mono text-lg"><b>Crear Asistencia</b></div>
+    <div class="text-center py-2 font-mono text-lg"><b>Registrar Asistencia</b></div>
 
     @if(session()->has('message'))
         <div class="alert alert-success">
@@ -8,7 +8,7 @@
     @endif
 
     <form wire:submit.prevent="createAssist">
-        
+
         <div class="form-group">
             <label for="pay">Usuario:</label>
             <select wire:model="pay" id="pay" name="pay" class="form-control @error('users') is-invalid @enderror">

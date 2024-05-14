@@ -1,15 +1,14 @@
 @extends('adminlte::page')
 
-@section('title', 'Maquinas')
+@section('title', 'Usuarios')
 
 @section('content_header')
-    <h1>Maquinas</h1>
+    <h1>Usuarios</h1>
 @stop
 
 @section('content')
     <div class="bg-white p-3 m-3 rounded-2xl shadow-2xl">
-        @livewire('equipo.equipo-create')
-        @livewire('equipo.equipo-list')
+        @livewire('user.user-list')
     </div>
 @stop
 

@@ -17,7 +17,18 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            /* Yop */
+
+            $table->string('lastname')->nullable();
+            $table->string('address')->nullable();
+            $table->integer('number')->nullable();
+            $table->date('Fnaciemiento')->nullable();
+            $table->string('genero')->nullable();
+            /* end */
+
+            /* imagen */
             $table->string('image')->nullable();
+            
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();

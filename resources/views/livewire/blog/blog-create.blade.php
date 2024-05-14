@@ -1,4 +1,12 @@
 <div>
+    <div class="text-center py-2 font-mono text-lg"><b>Registrar Blog</b></div>
+
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
+
     <form wire:submit='createBlog'>
         <input type="num" wire:model='titulo' placeholder="cantidad">
         <input type="date" wire:model='contenido' placeholder="Fadquirida">

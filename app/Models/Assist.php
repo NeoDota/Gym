@@ -9,11 +9,11 @@ class Assist extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['hora', 'fecha', 'users_id', 'categories_id'];
+    protected $fillable = ['pays_id', 'categories_id'];
 
-    public function user()
+    public function pay()
     {
-        return $this->belongsTo('App\Models\User', 'users_id');
+        return $this->belongsTo('App\Models\Pay', 'pays_id');
     }
 
     public function category()

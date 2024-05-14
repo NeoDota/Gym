@@ -1,7 +1,7 @@
 <div>
     <div>
-        <h2>Crear Hora y Curso</h2>
-    
+        <div class="text-center py-2 font-mono text-lg"><b>Crear Curso</b></div>
+
         @if(session()->has('message'))
             <div class="alert alert-success">
                 {{ session('message') }}

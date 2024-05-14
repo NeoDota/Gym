@@ -36,4 +36,9 @@ class Pay extends Model
         return $this->hasOne('App\Models\User', 'id', 'users_id');
     }
 
+    public function assist()
+    {
+        return $this->hasOne('App\Models\Assist', 'id', 'assist_id');
+    }
+
 }

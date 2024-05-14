@@ -1,5 +1,11 @@
 <div>
-    <h2>Crear Categoría</h2>
+    <div class="text-center py-2 font-mono text-lg"><b>Registrar Categoria</b></div>
+
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
 
     <form wire:submit.prevent="createCategory">
         @csrf

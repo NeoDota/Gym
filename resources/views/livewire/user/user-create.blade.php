@@ -1,5 +1,12 @@
 <div>
-    <div class="text-red">USERS</div>
+    <div class="text-center py-2 font-mono text-lg"><b>Registrar Usuario</b></div>
+
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
+
     <form wire:submit='createUser'>
         <input wire:model='name' type="text" placeholder="Nombre">
         <input wire:model='email' type="email" placeholder="Email">

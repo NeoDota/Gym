@@ -9,13 +9,14 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PayController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-/* Route::get('/', function () {
-    return view('dashboard');
-}); *//* auth.login */
+Route::get('/', function () {
+    return view('auth.login');
+});/* auth.login */
 
-/* Route::middleware([
+Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
@@ -23,7 +24,7 @@ use Illuminate\Support\Facades\Route;
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-}); */
+});
 
 Route::resource('home', HomeController::class);
 Route::resource('blog', BlogController::class);
@@ -34,3 +35,4 @@ Route::resource('pay', PayController::class);
 Route::resource('category', CategoryController::class);
 Route::resource('assist', AssistController::class);
 Route::resource('course', CourseController::class);
+Route::resource('user', UserController::class);
