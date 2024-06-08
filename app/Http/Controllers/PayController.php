@@ -63,4 +63,10 @@ class PayController extends Controller
     {
         //
     }
+
+    public function exportPdf($id)
+    {
+        $pay = Pay::findOrFail($id);
+        return view('pdf.pay', compact('pay'));
+    }
 }

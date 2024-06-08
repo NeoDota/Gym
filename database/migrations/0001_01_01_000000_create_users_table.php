@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('lastname')->nullable();
             $table->string('address')->nullable();
             $table->integer('number')->nullable();
+            $table->integer('ci')->nullable();
             $table->date('Fnaciemiento')->nullable();
             $table->string('genero')->nullable();
             /* end */

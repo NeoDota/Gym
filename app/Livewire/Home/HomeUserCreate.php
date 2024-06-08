@@ -18,6 +18,7 @@ class HomeUserCreate extends Component
     public $lastname;
     public $address;
     public $number;
+    public $ci;
     public $Fnaciemiento;
     public $genero;
 
@@ -46,6 +47,7 @@ class HomeUserCreate extends Component
             'password'=>$this->password,
             'image'=>$customName,
             'lastname'=>$this->lastname,
+            'ci'=>$this->ci,
             'address'=>$this->address,
             'number'=>$this->number,
             'Fnaciemiento'=>$this->Fnaciemiento,

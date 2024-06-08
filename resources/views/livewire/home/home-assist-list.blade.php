@@ -13,13 +13,13 @@
         </thead>
         <tbody>
             @foreach ($assists as $assist)
-            <tr>
+            <tr flex justify-center>
 
-                <td class="text-center">
+                <td class="flex justify-center">
                     @if ($assist->pay->user->image)
-                        <td class="text-center"><img src="{{ Storage::url($assist->pay->user->image) }}" width="50px" height="40px"class="rounded-full"></td>
+                        <img src="{{ Storage::url($assist->pay->user->image) }}" class="h-10 w-10 overflow-hidden rounded-full">
                     @else
-                    <img src="{{ asset('image/logoM.png') }}" width="50px" height="40px"class="rounded-full bg-black">
+                        <img src="{{ asset('image/logoM.png') }}" width="40px" height="40px"class="rounded-full bg-black">
                     @endif
                 </td>
                 <td class="text-center">{{ $assist->pay->user->name }} {{ $assist->pay->user->lastname }}</td>

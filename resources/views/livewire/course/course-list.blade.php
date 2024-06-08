@@ -6,8 +6,8 @@
                 <th class="text-center" scope="col">Perfil</th>
                 <th class="text-center" scope="col">user</th>
                 <th class="text-center" scope="col">hora</th>
-                <th class="text-center" scope="col">fecha</th>
-                <th class="text-center" scope="col">categorya</th>
+                <th class="text-center" scope="col">Fecha</th>
+                <th class="text-center" scope="col">Categoria</th>
             </tr>
         </thead>
         <tbody>

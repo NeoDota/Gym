@@ -7,16 +7,17 @@
                 <th class="text-center" scope="col">Usuario</th>
                 <th class="text-center" scope="col">Producto</th>
                 <th class="text-center" scope="col">Membrecia</th>
+                <th class="text-center" scope="col">Factura</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($pays as $pay)
             <tr>
-                <td class="text-center">
+                <td class="flex justify-center">
                     @if ($pay->user->image)
-                        <img src="{{ Storage::url($pay->user->image) }}" width="50px" height="40px"class="rounded-full">
+                        <img src="{{ Storage::url($pay->user->image) }}" class="h-10 w-10 overflow-hidden rounded-full">
                     @else
-                        <img src="{{ asset('image/logoM.png') }}" width="50px" height="40px"class="rounded-full bg-black">
+                        <img src="{{ asset('image/logoM.png') }}" width="40px" height="40px"class="rounded-full bg-black">
                     @endif
                 </td>
                 <td class="text-center">
@@ -39,6 +40,10 @@
                     @else
                         <span class="text-red">N/A</span>
                     @endif
+                </td>
+
+                <td class="text-center">
+                    <a href="{{ route('export.pdf', $pay->id) }}" target="_blank"><i class="fa-solid fa-print"></i></a>
                 </td>
             </tr>
             @endforeach

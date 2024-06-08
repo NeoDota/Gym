@@ -40,6 +40,7 @@ class UserFactory extends Factory
             'lastname' => fake()->lastName(),
             'address' => fake()->address(),
             'number' => fake()->numberBetween(60000000,79999999),
+            'ci' => fake()->numberBetween(2111111,11111111),
             'Fnaciemiento' => fake()->date('Y-m-d','2014-01-01'),
             /* 'genero' => fake()->randomElements('masculino','femenino'), */
             /* End Me */

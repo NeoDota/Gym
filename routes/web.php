@@ -24,9 +24,21 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::resource('home', HomeController::class);
+    Route::resource('blog', BlogController::class);
+    Route::resource('equipo', EquipoController::class);
+    Route::resource('producto', ProductoController::class);
+    Route::resource('member', MemberController::class);
+    Route::resource('pay', PayController::class);
+    Route::resource('category', CategoryController::class);
+    Route::resource('assist', AssistController::class);
+    Route::resource('course', CourseController::class);
+    Route::resource('user', UserController::class);
+
+    Route::get('/export-pdf/{id}', [PayController::class, 'exportPdf'])->name('export.pdf');
 });
 
-Route::resource('home', HomeController::class);
+/* Route::resource('home', HomeController::class);
 Route::resource('blog', BlogController::class);
 Route::resource('equipo', EquipoController::class);
 Route::resource('producto', ProductoController::class);
@@ -36,3 +48,5 @@ Route::resource('category', CategoryController::class);
 Route::resource('assist', AssistController::class);
 Route::resource('course', CourseController::class);
 Route::resource('user', UserController::class);
+
+Route::get('/export-pdf/{id}', [PayController::class, 'exportPdf'])->name('export.pdf'); */

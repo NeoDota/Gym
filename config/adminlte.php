@@ -116,7 +116,7 @@ return [
             'path' => 'image/preload.jpg',
             'alt' => 'VipGym',
             'effect' => 'animation__shake',
-            'width' => 2600,
+            'width' => 3600,
             'height' => 'auto',
         ],
     ],
@@ -196,7 +196,7 @@ return [
     'classes_content_wrapper' => 'bg-slate-400',/* bg de cont de plantilla AdmLTE */
     'classes_content_header' => 'font-bold mx-8',/* Estilos al Header */
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-green elevation-4 bg-black',
+    'classes_sidebar' => 'sidebar-dark-green elevation-4 bg-black font-mono font-bold',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-dark navbar-light bg-green',
     'classes_topnav_nav' => 'navbar-expand',
@@ -296,20 +296,33 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type' => 'navbar-search',
-            'text' => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type' => 'fullscreen-widget',
-            'topnav_right' => true,
+            'type' => 'navbar-notification',
+            'can' => ['add-blog-post', 'other-right'],
+            'id' => 'my-notification',                // An ID attribute (required).
+            'icon' => 'fas fa-envelope',                  // A font awesome icon (required).
+            'icon_color' => 'warning',                // The initial icon color (optional).
+            'label' => 0,                             // The initial label for the badge (optional).
+            'label_color' => 'danger',                // The initial badge color (optional).
+            'url' => 'notifications/show',            // The url to access all notifications/elements (required).
+            'topnav_right' => true,                   // Or "topnav => true" to place on the left (required).
+            'dropdown_mode' => true,                  // Enables the dropdown mode (optional).
+            'dropdown_flabel' => 'All notifications', // The label for the dropdown footer link (optional).
+            'update_cfg' => [
+                'url' => 'notifications/get',         // The url to periodically fetch new data (optional).
+                'period' => 30,                       // The update period for get new data (in seconds, optional).
+            ],
         ],
 
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Buscar',
         ],
+        /* Dark mode light */
+        /* [
+            'type' => 'darkmode-widget',
+            'topnav_right' => true,
+        ], */
         /* Ejemplo */
         [
             'text' => 'blog',
@@ -420,17 +433,17 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url' => 'admin/settings',
+            'text' => 'Perfil',
+            'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Cambiar Password',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text' => 'multilevel',
+            'text' => 'Multilevel',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
                 [
@@ -469,17 +482,17 @@ return [
         ],
         ['header' => 'labels'],
         [
-            'text' => 'important',
+            'text' => 'importante',
             'icon_color' => 'red',
             'url' => '#',
         ],
         [
-            'text' => 'warning',
+            'text' => 'peligro',
             'icon_color' => 'yellow',
             'url' => '#',
         ],
         [
-            'text' => 'information',
+            'text' => 'informacion',
             'icon_color' => 'cyan',
             'url' => '#',
         ],
@@ -721,6 +734,16 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdn.jsdelivr.net/npm/sweetalert2@11',
+                ],
+            ],
+        ],
+        'Jquery' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js',
                 ],
             ],
         ],
