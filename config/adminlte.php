@@ -297,22 +297,20 @@ return [
         // Navbar items:
         [
             'type' => 'navbar-notification',
-            'can' => ['add-blog-post', 'other-right'],
             'id' => 'my-notification',                // An ID attribute (required).
-            'icon' => 'fas fa-envelope',                  // A font awesome icon (required).
+            'icon' => 'fas fa-bell',                  // A font awesome icon (required).
             'icon_color' => 'warning',                // The initial icon color (optional).
-            'label' => 0,                             // The initial label for the badge (optional).
+            /* 'label' => 0, */                             // The initial label for the badge (optional).
             'label_color' => 'danger',                // The initial badge color (optional).
-            'url' => 'notifications/show',            // The url to access all notifications/elements (required).
+            'url' => '/notifications',            // The url to access all notifications/elements (required).
             'topnav_right' => true,                   // Or "topnav => true" to place on the left (required).
             'dropdown_mode' => true,                  // Enables the dropdown mode (optional).
-            'dropdown_flabel' => 'All notifications', // The label for the dropdown footer link (optional).
+            'dropdown_flabel' => 'Todas las notificaciones', // The label for the dropdown footer link (optional).
             'update_cfg' => [
-                'url' => 'notifications/get',         // The url to periodically fetch new data (optional).
-                'period' => 30,                       // The update period for get new data (in seconds, optional).
+                'url' => '/notifications/new',         // The url to periodically fetch new data (optional).
+                'period' => 5,                       // The update period for get new data (in seconds, optional).
             ],
         ],
-
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
@@ -342,34 +340,12 @@ return [
             ],  /* nose sabe revisar doc desp */
         ],
         /* End Example */
-        /* [
-            'text' => 'menu',
-            'icon' => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'child 1',
-                    'url' => 'menu/child1',
-                ],
-                [
-                    'text' => 'child 2',
-                    'url' => 'menu/child2',
-                ],
-            ],
-        ], */
-        
-        /* Home */
-
-        ['header' => 'HOME'],
         [
             'text' => 'Home',
             'url' => 'home',
             'classes' => 'text-bold',
             'icon' => 'fas fa-fw fa-home',
         ],
-
-        /* Ventas */
-
-        ['header' => 'VENTAS'],
         [
             'text' => 'Asistencia',
             'url' => 'assist',
@@ -388,18 +364,14 @@ return [
             'classes' => 'text-bold',
             'icon' => 'fas fa-fw fa-person-chalkboard',
         ],
-        /* Admin */
-
-        ['header' => 'ADMIN'],
         [
             'text' => 'Usuarios',
             'url' => 'user',
             'classes' => 'text-bold',
             'icon' => 'fas fa-fw fa-users',
-            'label' => 'falta',
         ],
         [
-            'text' => 'Member',
+            'text' => 'Membresias',
             'url' => 'member',
             'classes' => 'text-bold',
             'icon' => 'fas fa-fw fa-user-check',
@@ -416,14 +388,11 @@ return [
             'classes' => 'text-bold',
             'icon' => 'fas fa-fw fa-cart-shopping',
         ],
-        /* Admin */
-
-        ['header' => 'EXTRAS'],
         [
-            'text' => 'Blog',
-            'url' => 'blog',
+            'text' => 'Notify',
+            'url' => 'notifications/create',
             'classes' => 'text-bold',
-            'icon' => 'fas fa-fw fa-blog',
+            'icon' => 'fas fa-fw fa-bell',
         ],
         [
             'text' => 'Equipos',
@@ -431,70 +400,11 @@ return [
             'classes' => 'text-bold',
             'icon' => 'fas fa-fw fa-wrench',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'CUENTA'],
         [
             'text' => 'Perfil',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'Cambiar Password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text' => 'Multilevel',
-            'icon' => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text' => 'importante',
-            'icon_color' => 'red',
-            'url' => '#',
-        ],
-        [
-            'text' => 'peligro',
-            'icon_color' => 'yellow',
-            'url' => '#',
-        ],
-        [
-            'text' => 'informacion',
-            'icon_color' => 'cyan',
-            'url' => '#',
         ],
     ],
 

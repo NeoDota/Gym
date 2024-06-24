@@ -17,7 +17,7 @@
 
                 <td class="flex justify-center">
                     @if ($assist->pay->user->image)
-                        <img src="{{ Storage::url($assist->pay->user->image) }}" class="h-10 w-10 overflow-hidden rounded-full">
+                        <img src="{{ asset('image/logoM.png') }}{{-- {{ Storage::url($assist->pay->user->image) }} --}}" class="h-10 w-10 overflow-hidden rounded-full">
                     @else
                         <img src="{{ asset('image/logoM.png') }}" width="40px" height="40px"class="rounded-full bg-black">
                     @endif

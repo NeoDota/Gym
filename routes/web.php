@@ -7,6 +7,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\PayController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UserController;
@@ -34,6 +35,11 @@ Route::middleware([
     Route::resource('assist', AssistController::class);
     Route::resource('course', CourseController::class);
     Route::resource('user', UserController::class);
+
+    Route::get('notifications/',[NotificationController::class,'index']);
+    Route::get('notifications/new',[NotificationController::class,'getAllFormatedByAdminLte']);
+    Route::get('notifications/update-unreaded',[NotificationController::class,'updateUnreaded'])->name('notification.update_unreaded');
+    Route::get('notifications/create',[NotificationController::class,'create'])->name('notification.create');
 
     Route::get('/export-pdf/{id}', [PayController::class, 'exportPdf'])->name('export.pdf');
 });

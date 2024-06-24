@@ -34,6 +34,7 @@ class HomeAssistCreate extends Component
         ]);
 
         session()->flash('message', 'Assistencia creada exitosamente.');
+        
         $this->dispatch('assistCreated');
     }
 
